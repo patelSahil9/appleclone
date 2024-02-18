@@ -19,6 +19,22 @@ body{
 .navbar>div{
     color:white
 }
+#div1 {
+    z-index: 0;
+    position: absolute;
+    transition: all ease 0.3s;
+    right: 10px;
+    font-size:small;
+  }
+  
+  #div2 {
+    z-index: 3;
+    right: 10px;
+    position: absolute;
+    top: 2px;
+    transition: all ease 0.3s;
+    font-size:small;
+  }
 .appleimage{
     height: 500px;
     width: 100%;
