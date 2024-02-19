@@ -3,31 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="x.css">
     <title>Dropdown Navbar</title>
+    <style>
+        /* Style for the navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style for the navigation links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Style for the dropdown content */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Style for the dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* Style for the dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style for the dropdown links */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        /* Show the dropdown menu when the user hovers over the dropdown button */
+        .dropdown:click .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="navbar-item">
-        <a href="#">Home</a>
-    </div>
-    <div class="navbar-item dropdown">
-        <a href="#">Services</a>
-        <div class="dropdown-content">
-            <a href="#">Web Design</a>
-            <a href="#">Graphic Design</a>
-            <a href="#">Digital Marketing</a>
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Dropdown</button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="#option1">Option 1</a>
+            <a href="#option2">Option 2</a>
+            <a href="#option3">Option 3</a>
         </div>
     </div>
-    <div class="navbar-item">
-        <a href="#">About Us</a>
-    </div>
-    <div class="navbar-item">
-        <a href="#">Contact</a>
-    </div>
-</nav>
+</div>
 
-<script src="script.js"></script>
+<script>
+    // Toggle the dropdown menu visibility
+    function toggleDropdown() {
+        var dropdown = document.getElementById("myDropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+</script>
+
 </body>
 </html>

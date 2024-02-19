@@ -28,3 +28,7 @@ container.addEventListener("click", () => {
     }
     temp++;
 })
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropcnt");
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
